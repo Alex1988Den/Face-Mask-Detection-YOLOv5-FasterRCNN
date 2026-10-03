@@ -1,69 +1,164 @@
-# CV. Проект по детекции масок на лицах
-Описание проекта
-
-Этот проект посвящен разработке и обучению моделей для детекции масок на лицах с использованием методов глубокого обучения. Мы сравниваем одноуровневые и двухуровневые детекторы, такие как YOLOv5 и Faster R-CNN, применяя метрики Intersection over Union (IoU) и Average Precision (AP) для оценки производительности моделей. Основная цель проекта — достичь точности выше 85% на валидационной выборке.
-Структура проекта
-
-    data/ — Датасеты, используемые для обучения и валидации модели.
-    models/ — Сохраненные модели и веса, полученные в процессе обучения.
-    notebooks/ — Jupyter ноутбуки с кодом для обучения, валидации и визуализации.
-    src/ — Исходный код, включая определения моделей и функции для обучения.
-    results/ — Визуализация результатов, включая графики и примеры предсказаний модели.
-
-# Установка
-
-Чтобы запустить проект локально, выполните следующие шаги:
-
-    Клонируйте репозиторий:
-
-    bash
-
-git clone https://github.com/USERNAME/REPOSITORY_NAME.git
-cd REPOSITORY_NAME
-
-Создайте и активируйте виртуальное окружение:
-
-bash
-
-python -m venv myenv
-source myenv/bin/activate  # Для Windows используйте myenv\Scripts\activate
-
-Установите необходимые зависимости:
-
-bash
-
+# 😷 Face Mask Detection Using YOLOv5 and Faster R-CNN
+ 
+## 📌 Project Overview
+ 
+This project focuses on face mask detection using modern deep learning object detection architectures.
+ 
+The project compares one-stage and two-stage object detectors, specifically YOLOv5 and Faster R-CNN, to identify and localize faces wearing masks in images.
+ 
+The primary goal was to develop a reliable object detection system capable of accurately detecting face masks and evaluating performance using industry-standard computer vision metrics.
+ 
+---
+ 
+## 🎯 Project Objectives
+ 
+- Train object detection models for face mask detection
+- Compare YOLOv5 and Faster R-CNN architectures
+- Detect and localize faces using bounding boxes
+- Evaluate detection quality using IoU and Average Precision
+- Achieve validation performance above 85%
+ 
+---
+ 
+## 📊 Dataset
+ 
+The dataset contains facial images belonging to three categories:
+ 
+- Face With Mask
+- Face Without Mask
+- Incorrectly Worn Mask
+ 
+Bounding box annotations were used for object detection training and evaluation.
+ 
+---
+ 
+## 🧠 Deep Learning Models
+ 
+### YOLOv5
+ 
+A single-stage object detector optimized for fast and efficient real-time detection.
+ 
+### Faster R-CNN
+ 
+A two-stage object detector designed to achieve high localization and detection accuracy.
+ 
+---
+ 
+## 📏 Evaluation Metrics
+ 
+Model performance was evaluated using:
+ 
+### Intersection over Union (IoU)
+ 
+Measures how accurately predicted bounding boxes overlap with ground truth annotations.
+ 
+### Average Precision (AP)
+ 
+Measures overall object detection quality across different confidence thresholds.
+ 
+---
+ 
+## 🔍 Project Workflow
+ 
+### 1. Data Preparation
+ 
+- Dataset loading
+- Annotation processing
+- Image preprocessing
+ 
+### 2. Model Training
+ 
+- YOLOv5 training
+- Faster R-CNN training
+- Hyperparameter tuning
+ 
+### 3. Model Evaluation
+ 
+- Validation set evaluation
+- IoU measurement
+- Average Precision calculation
+ 
+### 4. Result Visualization
+ 
+- Detection examples
+- Bounding box visualization
+- Performance comparison
+ 
+---
+ 
+## 📈 Results
+ 
+### ✅ Validation Accuracy Above 85%
+ 
+Key observations:
+ 
+- Stable loss convergence during training
+- Consistent improvement in detection quality
+- Maximum Average Precision (AP) score of **0.8451**
+- Reliable face mask localization and classification performance
+ 
+---
+ 
+## 🛠 Technologies
+ 
+- Python
+- PyTorch
+- YOLOv5
+- Faster R-CNN
+- OpenCV
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+ 
+---
+ 
+## 🚀 Installation
+ 
+Clone the repository:
+ 
+```bash
+git clone https://github.com/Alex1988Den/Face-Mask-Detection-YOLOv5-FasterRCNN.git
+cd Face-Mask-Detection-YOLOv5-FasterRCNN
+```
+ 
+Install dependencies:
+ 
+```bash
 pip install -r requirements.txt
-
-Запустите Jupyter Notebook для воспроизведения экспериментов:
-
-bash
-
-    jupyter notebook
-
-# Использование
-
-Для обучения модели запустите ноутбук train_model.ipynb, который содержит шаги по загрузке данных, обучению и оценке модели.
-Результаты
-
-На текущий момент модель достигла точности выше 85% на валидационной выборке. В процессе обучения было замечено следующее:
-
-    Эффективность потерь: Визуализация потерь показала стабильное снижение, что свидетельствует о хорошем процессе обучения.
-    Average Precision: Значения AP колебались, но в целом увеличивались, достигая максимума на уровне 0.8451. Это подтверждает стабильность и надежность модели.
-
-# Визуализация
-
-Примеры предсказаний модели и графики метрик можно найти в папке results/.
-Лицензия
-
-Этот проект лицензирован под MIT License — подробности см. в файле LICENSE.
-Датасет
-
-Датасет содержит изображения с лицами в трех категориях:
-
-    С маской
-    Без маски
-    Маска надета неправильно
-
-Контакты
-
-Для вопросов и предложений вы можете связаться со мной через GitHub.
+```
+ 
+Launch Jupyter Notebook:
+ 
+```bash
+jupyter notebook
+```
+ 
+Open:
+ 
+```text
+Face_Mask_Detection_YOLOv5_FasterRCNN.ipynb
+```
+ 
+and run all cells.
+ 
+---
+ 
+## 💡 Applications
+ 
+- Public Safety Monitoring
+- Smart Surveillance Systems
+- Workplace Safety Compliance
+- Real-Time Face Mask Detection
+- Computer Vision Research
+ 
+---
+ 
+## 👨‍💻 Author
+ 
+Developed by **Aleksandr Denissov**
+ 
+📧 Email: aleksandr.denissov@brave.ee
+ 
+---
+ 
+⭐ If you find this project useful, feel free to leave a star on GitHub.
